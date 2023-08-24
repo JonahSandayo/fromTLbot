@@ -70,5 +70,5 @@ def TLapi(TL_txt):
   result = (response['translations'][0]['text'])
   return (result)
 
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = os.environ['TOKEN']
 client.run(TOKEN)
