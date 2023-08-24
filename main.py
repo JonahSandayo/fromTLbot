@@ -4,7 +4,6 @@ import discord
 import langid
 import requests
 from discord import app_commands
-from keep_alive import keep_alive
 
 API_KEY = os.environ['APIKEY']
 client = discord.Client(intents=discord.Intents.all())
@@ -71,7 +70,5 @@ def TLapi(TL_txt):
   result = (response['translations'][0]['text'])
   return (result)
 
-
-keep_alive()
 
 client.run(os.getenv['TOKEN'])
