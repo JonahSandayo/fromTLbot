@@ -36,7 +36,7 @@ async def test_command(interaction: discord.Interaction):
 async def on_message(message):
   if message.author.bot or message.channel.id != 1051127361350942730:
     return
-  elif len(message.content) >= 150:
+  elif len(message.content) >= 280:
     await message.reply("文字数制限を超過しました。Character limit exceeded.")
   else:
     sendtxt = TLapi(message.content)
